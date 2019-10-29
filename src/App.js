@@ -33,3 +33,19 @@ export default connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(App);
+
+
+//to gain access to the store somewhere in our app, we use a second function provided by react-redux, connect
+/*
+
+Ok, so this code places a button on the page with an onClick event 
+listener pointed to this.handleOnClick. When this.handleOnClick is invoked, it calls a function, 
+this.props.increaseCount. Well.. increaseCount is actually being provided by the new function below our A
+pp component: mapDispatchToProps.
+
+Meanwhile, we've also got this.props.items.length, which is also a prop created from our Redux store.
+ As the store's items property increases, App will display a different number!
+
+
+
+*/
